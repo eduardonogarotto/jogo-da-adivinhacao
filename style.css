@@ -86,10 +86,16 @@ form {
 }
 
 input {
-  width: 6.5rem;
+  width: 7rem;
 
   border-radius: 0.4rem 0 0 0.4rem;
   background: #dce2e9;
+  outline: none;
+}
+
+input:invalid {
+  color: red;
+  text-decoration: line-through;
 }
 
 .screen1 button {
@@ -111,20 +117,28 @@ img {
   border-radius: 0.4rem;
 
   position: absolute;
+
   animation: wrongAnswer 1s both;
+  -webkit-animation: wrongAnswer 1s both;
 }
 
 @keyframes wrongAnswer {
   0% {
-    transform: scale(0);
     opacity: 0;
+
+    transform: scale(0);
+    -webkit-transform: scale(0);
   }
   50% {
-    transform: scale(1);
     opacity: 1;
+
+    transform: scale(1);
+    -webkit-transform: scale(1);
   }
   100% {
-    transform: scale (0);
     opacity: 0;
+
+    transform: scale(0);
+    -webkit-transform: scale(0);
   }
 }
